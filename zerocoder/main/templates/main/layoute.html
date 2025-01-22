@@ -11,8 +11,6 @@
     {% endblock %}
 </head>
 <body>
-    {% include "main/nav.html" %}
-
     <header class="bg-light p-3">
         <div class="container">
             <nav class="navbar navbar-expand navbar-dark bg-success">
@@ -28,26 +26,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Контакты</a>
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#"
-                            id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown">
-                            Меню
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">
-                                Page 1
-                                </a>
-                            </li>
-
-                            <li><a class="dropdown-item" href="#">
-                                Page 2
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
 
                 <form class="d-flex">
@@ -62,24 +40,18 @@
         </div>
     </header>
 
-    <main class="container my-4">
-        {% block content %}
+    {% include "main/nav.html" %}
 
-        {% endblock %}
-    </main>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Сила самогипноза.</h1>
+        <main class="container my-4">
+            {% block content %}
 
-    <footer class="bg-light text-center p-4">
-        <div class="container">
-            <p>Контактная информация: psychology@gmail.com</p>
-            <p>
-                <a href="#">Facebook</a> |
-                <a href="#">Instagram</a> |
-                <a href="#">Twitter</a>
-            </p>
-        </div>
-    </footer>
+            {% endblock %}
+        </main>
+    </div>
 
-
+    {% include "main/footer.html %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
