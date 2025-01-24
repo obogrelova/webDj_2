@@ -14,34 +14,7 @@
     {% endblock %}
 </head>
 <body>
-    <header class="bg-light p-3">
-        <div class="container">
-            <nav class="navbar navbar-expand navbar-dark bg-success">
-                <a class="navbar-brand" href="index.html">
-                    Главная
-                </a>
-
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">О нас</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
-                    </li>
-                </ul>
-
-                <form class="d-flex">
-                    <input class="form-control me-2"
-                        type="search"
-                        placeholder="Поиск по сайту" />
-                    <button class="btn btn-primary" type="submit">
-                        Поиск
-                    </button>
-                </form>
-            </nav>
-        </div>
-    </header>
+    {% include "main/nav.html" %}
 
     <div class="container mt-5">
         <h1 class="text-center mb-4">Сила самогипноза.</h1>
